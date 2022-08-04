@@ -19,12 +19,12 @@
       {% if item.photo %}
         <img src="{{ item.photo.url }}" alt="" width="350" class="mr-3">
       {% else %}
-        <img src="https://picsum.photos/id/866/200/300" alt="" class="mr-3>
+        <img src="https://picsum.photos/id/866/200/300" alt="" class="mr-3">
       {% endif %}
       <div class="media-body">
           <h5 class="card-title">{{ item.title }}</h5>
           <p class="card-text">{{ item.content }}</p>
-          <a href="#" class="btn btn-primary">Read more...</a>
+          <a href="{{ item.get_absolute_url }}" class="btn btn-primary">Read more...</a>
       </div>
     </div>
   </div>
